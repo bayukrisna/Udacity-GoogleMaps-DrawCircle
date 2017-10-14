@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    static final CameraPosition JTG = CameraPosition.builder()
+    static final CameraPosition BAY = CameraPosition.builder()
             .target(new LatLng(48.8584, 2.2945))
             .zoom(15)
             .bearing(0)
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(GoogleMap map) {
         Toast toast = Toast.makeText(getApplicationContext(), "Map Ready!", Toast.LENGTH_SHORT);
         toast.show();
-        map.moveCamera(CameraUpdateFactory.newCameraPosition(JTG));
+        map.moveCamera(CameraUpdateFactory.newCameraPosition(BAY));
         //map.addPolyline(new PolylineOptions().geodesic(true).add(renton).add(kirkland).add(everett).add(lynnwood).add(montlake).add(kent).add(showare).add(renton));
         //map.addPolygon(new PolygonOptions().add(renton, kirkland, everett, lynnwood).fillColor(Color.GREEN));
         map.addCircle(new CircleOptions()
